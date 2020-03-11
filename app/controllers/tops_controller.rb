@@ -3,7 +3,7 @@ class TopsController < ApplicationController
   def index
      @questions = Question.all
      @question = Question.new
-    # top_controllerだけどフォームはつくれるはず。profyを参考にしてみよう。
+    # top_controllerだけどフォームはつくれるはず。profyを参考にしてみよう。→できた！
   end
   
   def show

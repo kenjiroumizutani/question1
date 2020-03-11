@@ -8,9 +8,12 @@
    <h1>問題一覧</h1>
    <div class="qsmenu">
     <%= form_for(@question) do |f| %>
-      <%= f.text_field :title, placeholder: "例：railsコマンド" %>
-      <%= f.text_field :questions, placeholder: "例：サーバーを立ち上げるコマンドは？" %>
-      
+      <%= f.text_field :title, placeholder: "例：railsコマンド" %><br>
+      <%= f.text_field :questions, placeholder: "例：サーバーを立ち上げるコマンドは？" %><br>
+      <%= f.text_field :choice1, placeholder: "例：選択肢１" %><br>
+      <%= f.text_field :choice2, placeholder: "例：選択肢２" %><br>
+      <%= f.text_field :choice3, placeholder: "例：選択肢３" %><br>
+      <%= f.text_field :correct, placeholder: "例：正解" %><br>
       <%= f.submit "問題を作る" %>
     <% end %>
     <% @questions.each do |question| %>

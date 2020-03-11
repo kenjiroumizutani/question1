@@ -19,6 +19,10 @@ body {
    background: rgba(255,255,255,0.3);
 }
 
+.qs_make {
+  font-size: 1.0rem;
+}
+
 .title {
    color: rgb(100,100,200);
    font-size: 5.0rem;

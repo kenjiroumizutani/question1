@@ -1,0 +1,8 @@
+"4","ログイン機能を実装するうえで便利なGemファイルはどれか","devise","kaminari","pry-rails","devise","0000-00-00 00:00:00","2020-01-19 12:48:16","rails-login-","devise",
+"5","deviseのファイルを作成するときにターミナルで実行するのはどれが正しいか","rails g devise","rails g devise:install","rails g devise""insrall""","rails g devise:install","0000-00-00 00:00:00","2020-03-10 07:51:35","rails-login-2","rails g devise:install",
+"6","top_controllerのindexアクションをルートパスに設定するにはどの書き方が正しいか","root to: ""top#index""","root :""index""","root to. ""top#index""","root to: ""top#index""","0000-00-00 00:00:00","0000-00-00 00:00:00","rails-root-","root to: ""top#index""",NULL
+"7","controllerの7つのアクションは、
+[index,new,create,edit,update]
+残りの2つを正しく表しているものはどれ？","show,delete","patch,delete","show,destroy","show,destroy","0000-00-00 00:00:00","2020-03-10 08:33:02","rails-controller-","show,destroy","いつも
+destroyとdeleteを迷う"
+"8","usersのコントローラーを作る時にターミナルに打つ命令文は？","rails g controller 名前","rails g 名前 controller","rails g cotroller:名前","rails g controller 名前","0000-00-00 00:00:00","0000-00-00 00:00:00","rails-controller-2","rails g controller 名前",NULL

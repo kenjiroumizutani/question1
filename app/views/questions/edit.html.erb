@@ -1,0 +1,23 @@
+<html>
+ <head></head>
+ 
+ <body>
+  <div class="bg-mask">
+  <div class="qsedit">
+   <%= form_tag(question_path(@question), method: :patch) do %>
+    <h3><%= @question.questions %></h3>
+    <%= radio_button_tag(:answer, @question.choice1) %>
+    <%= label_tag(:answer, @question.choice1) %><br>
+    <%= radio_button_tag(:answer, @question.choice2) %>
+    <%= label_tag(:answer, @question.choice2) %><br>
+    <%= radio_button_tag(:answer,  @question.choice3) %>
+    <%= label_tag(:answer, @question.choice3) %><br>
+    <%= label_tag :学習メモ %><br>
+    <%= text_area_tag :comment %>
+    <%= submit_tag("回答") %>
+    <!--ここにコメント欄を作成してカラムに反映させる。updateのviewにも表示させる。コメントない時にエラーにしないようにしなくては・・・-->
+   <% end %>
+  </div>
+  </div>
+ </body>
+</html>

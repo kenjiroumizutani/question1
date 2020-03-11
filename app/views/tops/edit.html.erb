@@ -1,0 +1,14 @@
+<html>
+ <head></head>
+ 
+ <body>
+   <%= form_tag(controller: "questions", action: "edit") do %>
+    <h3><%= @questions.questions %></h3>
+    <input type="radio" name="1" value=”a”><%= @questions.choice1 %> 
+    <input type="radio" name="1" value=”b”><%= @questions.choice2 %>
+    <input type="radio" name="1" value=”c”><%= @questions.choice3 %>
+    <%= submit_tag("Click") %>
+    <% end %>
+    <p><%= link_to '答え', "tops/id", method: :get %></p>
+ </body>
+</html>

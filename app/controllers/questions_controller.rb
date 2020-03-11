@@ -4,6 +4,14 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
   end
   
+  def create
+    Question.create(create_params)
+    redirect_to :root and return
+    # createしたあとにトップに戻るようにリダイレクト
+    # redirect_to :rootだけではアクション内の処理は終了せず次のコードにいってしまう
+    # redirect_to :root and returnと書くのがベター
+  end
+  
   def show
     @question = Question.find(params[:id])
   end
@@ -21,5 +29,9 @@ class QuestionsController < ApplicationController
   private
   def questions_params
     params.permit(:answer,:comment)
+  end
+  
+  def create_params
+    params.require(:question).permit(:questions,:title)
   end
 end

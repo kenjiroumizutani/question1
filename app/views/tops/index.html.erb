@@ -7,6 +7,12 @@
    
    <h1>問題一覧</h1>
    <div class="qsmenu">
+    <%= form_for(@question) do |f| %>
+      <%= f.text_field :title, placeholder: "例：railsコマンド" %>
+      <%= f.text_field :questions, placeholder: "例：サーバーを立ち上げるコマンドは？" %>
+      
+      <%= f.submit "問題を作る" %>
+    <% end %>
     <% @questions.each do |question| %>
       <%= question.title %>
       <%=link_to "問題へ", "/questions/#{question.id}/edit", method: :get  %><br>

@@ -30,6 +30,9 @@ class QuestionsController < ApplicationController
     question = Question.find(params[:id])
     question.destroy 
     # 権限を絞る場合以下のコードを上についか、if question.user_id == current_user.id
+    redirect_to :root and return
+  end
+  
   private
   def questions_params
     params.permit(:answer,:comment)

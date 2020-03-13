@@ -5,6 +5,9 @@
   <div class="bg-mask">
    <div class="title">Rails Questions</div>
    
+   このアプリは三択クイズの作成と回答のシンプルなアプリです<br>
+   試作品としてあげているので随時バージョンアップしていく予定です<br>
+   
    <h1>問題一覧</h1>
    <div class="qsmenu">
     <%= form_for(@question) do |f| %>
@@ -27,8 +30,9 @@
       <%= question.title %>
       <%=link_to "問題へ", "/questions/#{question.id}/edit", method: :get  %>
       <%=link_to "削除", "/questions/#{question.id}", method: :delete  %><br>
-      <!--削除したらトップに戻るように仕込まないといけない-->
     <% end %>
+    
+    試作品ですので問題数は少ないです<br>
    </div>
   </div>
  </body>

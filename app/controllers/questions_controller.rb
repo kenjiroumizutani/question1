@@ -26,6 +26,10 @@ class QuestionsController < ApplicationController
     # (questions_params)はしたの記述に由来している。answer以外の内容はストロングパラメータではじくよ
   end
   
+  def destroy
+    question = Question.find(params[:id])
+    question.destroy 
+    # 権限を絞る場合以下のコードを上についか、if question.user_id == current_user.id
   private
   def questions_params
     params.permit(:answer,:comment)

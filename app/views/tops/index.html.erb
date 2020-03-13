@@ -22,9 +22,11 @@
       <%= f.text_field :correct, placeholder: "例：rails s" %><br>
       <%= f.submit "問題を作る" %><br>
     <% end %>
+    
     <% @questions.each do |question| %>
       <%= question.title %>
       <%=link_to "問題へ", "/questions/#{question.id}/edit", method: :get  %><br>
+      
     <% end %>
    </div>
   </div>

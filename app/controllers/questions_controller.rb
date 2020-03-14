@@ -1,7 +1,6 @@
 class QuestionsController < ApplicationController
 
   def index
-    @question = Question.find(params[:id])
   end
   
   def create
@@ -12,9 +11,8 @@ class QuestionsController < ApplicationController
     # redirect_to :root and returnと書くのがベター
   end
   
-  def show
-    @question = Question.find(params[:id])
-  end
+  # def show
+  # end
   
   def edit
     @question = Question.find(params[:id])

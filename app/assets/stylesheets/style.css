@@ -4,11 +4,11 @@
 
 
 body {
-    height: 100vh;
+    height: 100%;
     color: #000;
     text-align: center;
     font-size: 0.8rem;
-    
+    background: radial-gradient(#F2B9A1, #FFFFFF);
     background-size: cover;
     
 }
@@ -16,7 +16,25 @@ body {
 .bg-mask {
    height: 100%;
    width: 100%;
-   background: rgba(255,255,255,0.3);
+   /*background: rgba(255,255,255,0.3);*/
+}
+
+.bg-mask span{
+  color:#FF0000;
+}
+
+.top_info {
+  font-size: 3.0rem;
+}
+
+.info {
+  padding: 10px 20px;
+  text-align: start;
+  font-size: 1.8rem;
+}
+
+.tophe {
+  font-size: 1.8rem;
 }
 
 .qs_make {
@@ -40,3 +58,4 @@ body {
 .qsupdate {
     font-size: 1.8rem;
 }
+

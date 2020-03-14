@@ -6,6 +6,9 @@ body {
     background: image-url('../assets/bg.jpg') fixed;
     // background-size: cover;
     
-}// Place all the styles related to the tops controller here.
+}
+// デプロイ後背景を読み込まなかった対策に書き込んだが上手くいかず。
+// もう少し調べて再挑戦
+// Place all the styles related to the tops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/

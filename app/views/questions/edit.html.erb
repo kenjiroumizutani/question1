@@ -5,7 +5,8 @@
   <div class="bg-mask">
   <div class="qsedit">
    <%= form_tag(question_path(@question), method: :patch) do %>
-    <h3><%= @question.questions %></h3>
+    <h3><%= simple_format(@question.questions) %></h3>
+    <!--simple_format()を使うことで改行を反映させることができる-->
     <%= radio_button_tag(:answer, @question.choice1) %>
     <%= label_tag(:answer, @question.choice1) %><br>
     <%= radio_button_tag(:answer, @question.choice2) %>
@@ -13,8 +14,9 @@
     <%= radio_button_tag(:answer,  @question.choice3) %>
     <%= label_tag(:answer, @question.choice3) %><br>
     <%= label_tag :学習メモ %><br>
-    <%= text_area_tag :comment %>
+    <%= text_area_tag :comment %><br>
     <%= submit_tag("回答") %>
+    <!--回答にselect使ってみてもいいかも-->
    <% end %>
   </div>
   </div>

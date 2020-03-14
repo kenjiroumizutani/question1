@@ -33,6 +33,11 @@ body {
   font-size: 1.8rem;
 }
 
+.info span{
+  font-size: 1.8rem;
+  color: #FF0000;
+}
+
 .tophe {
   font-size: 1.8rem;
 }
@@ -50,6 +55,11 @@ body {
 .qsmenu {
     font-size: 1.8rem;
 }
+
+input[type="text"] {
+        width: 300px;
+        height: 40px;
+    }
 
 .qsedit {
     font-size: 1.8rem;

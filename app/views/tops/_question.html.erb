@@ -1,0 +1,4 @@
+
+         <%= question.title %>
+         <%=link_to "問題へ", "/questions/#{question.id}/edit", method: :get  %>
+         <%=link_to "削除", "/questions/#{question.id}", method: :delete  %><br>

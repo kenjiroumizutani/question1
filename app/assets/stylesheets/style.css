@@ -73,3 +73,8 @@ input[type="text"] {
   margin: 5% 30%;
   text-align: left;
 }
+
+.qs_select {
+  /*margin: 5% 20%;*/
+  /*text-align: left;*/
+}

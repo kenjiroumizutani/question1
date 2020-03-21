@@ -9,7 +9,7 @@
    <%=link_to "採用担当者様へ", "/questions", method: :get  %>
    </div>
    
-   <h1>問題一覧</h1>
+   <h1>問題作成</h1>
    ＊入力エリアの右下をドラックすると任意の大きさに変化できます。
    <div class="qsmenu">
     <%= form_for(@question) do |f| %>
@@ -27,16 +27,16 @@
       <%= f.text_area :choice3,:size=>"60x1", placeholder: "例：rails s" %><br>
      正解><br>
       <%= f.text_area :correct,:size=>"60x1", placeholder: "例：rails s" %><br>
-      <%= f.submit "問題を作る" %></qs_make><br>
+      <%= f.submit "問題を作る" %></qs_make><br><br>
     <% end %>
     
-    <% @questions.each do |question| %>
-      <%= question.title %>
-      <%=link_to "問題へ", "/questions/#{question.id}/edit", method: :get  %>
-      <%=link_to "削除", "/questions/#{question.id}", method: :delete  %><br>
-    <% end %>
     
-    試作品ですので問題数は少ないです<br>
+    <h1>問題一覧</h1>
+    <div class="qs_select">
+      <%= render partial: "tops/question", collection: @questions %>
+    </div>
+    <br>
+      試作品ですので問題数は少な目です<br>
    </div>
   </div>
  </body>

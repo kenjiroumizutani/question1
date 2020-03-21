@@ -43,29 +43,33 @@ body {
 }
 
 .qs_make {
-  font-size: 1.0rem;
+  font-size: 1.5rem;
 }
 
 .title {
-   color: rgb(100,100,200);
-   font-size: 5.0rem;
-   margin: 50px 0px 20px 0px;
+  color: rgb(100,100,200);
+  font-size: 5.0rem;
+  margin: 50px 0px 20px 0px;
 }
 
 .qsmenu {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 input[type="text"] {
-        width: 300px;
-        height: 40px;
-    }
+  width: 400px;
+  height: 45px;
+}
 
 .qsedit {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 .qsupdate {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
+.kaitou {
+  margin: 5% 30%;
+  text-align: left;
+}

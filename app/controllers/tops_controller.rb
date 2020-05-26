@@ -1,9 +1,9 @@
 class TopsController < ApplicationController
   
   def index
-     @questions = Question.all
-     @question = Question.new
-    # top_controllerだけどフォームはつくれるはず。profyを参考にしてみよう。→できた！
+    @user = current_user
+    @questions = Question.all
+    # これだとanswerとquestionの紐付けができてないことになるのか？
   end
   
   def show

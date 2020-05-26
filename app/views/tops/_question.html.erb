@@ -1,4 +1,17 @@
+<div class="qs_select">
+  <div class = "qs_title"><%= question.title %></div>
+    <% unless question.answers.exists?(user_id: @user.id,question_id: question.id) %>
+      <%= form_tag(new_answer_path, :method=>"get", class:"top_tag") do %>
+          <%= hidden_field_tag(:question_id, question.id) %>
+          <%= submit_tag("問題", :class => "question_submit") %>
+      <% end %>
+    <% else %>
+      <%= form_tag(edit_answer_path(question.user_answer(@user.id)), :method=>"get", class:"top_tag") do %>
+      <!--profyのuserページの部分テンプレート内の編集と同じパスの書き方-->
+          <%= hidden_field_tag(:question_id, question.id) %>
+          <%= submit_tag("問題", :class => "question_submit") %>
+      <% end %>
+    <% end %>
+  <%=link_to "削除", "/questions/#{question.id}", method: :delete, class: "delete_submit" %><br>
+</div>
 
-         <%= question.title %>
-         <%=link_to "問題へ", "/questions/#{question.id}/edit", method: :get  %>
-         <%=link_to "削除", "/questions/#{question.id}", method: :delete  %><br>

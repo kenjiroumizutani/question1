@@ -3,6 +3,10 @@ class QuestionsController < ApplicationController
   def index
   end
   
+  def new
+    @question = Question.new
+  end
+  
   def create
     Question.create(create_params)
     redirect_to :root and return
@@ -21,7 +25,7 @@ class QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
     @question.update(questions_params) 
-    # (questions_params)はしたの記述に由来している。answer以外の内容はストロングパラメータではじくよ
+    # (questions_params)はしたの記述に由来している。answer,comment以外の内容はストロングパラメータではじくよ
   end
   
   def destroy

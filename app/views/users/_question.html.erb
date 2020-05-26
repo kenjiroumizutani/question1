@@ -1,0 +1,23 @@
+<div class = "user_qs">
+  <div class = "qs_title"><%= question.title %></div>
+      <% if question.correct == question.user_answer(@user.id).answer %>
+      <!--question.user_answer(@user.id)これはquestionモデルに記載してあるメソッド-->
+      <!--メソッドの定義内容は「answersテーブルから user_idカラムの値が-->
+      <!--「その回答をしたユーザーのid」と一致し、かつquestion_idカラムの値が-->
+      <!--「その質問のid」と一致する回答を検索し、取得しています。-->
+      
+      <!--もし複数回同じ問題に答えたレコードを残して学習の変遷を記録しようとした場合以下の点に気をつける-->
+      <!--このメソッドで検索しているから、同問題の解答レコードを習得しようとしても、-->
+      <!--初回の回答のみが反映されてしまう。answerテーブルのidでレコードを習得しないといけない。-->
+        <!--<%= question.user_answer(@user.id).answer %>-->
+        <span> ○ </span>
+      <% else %>
+        <!--<%= question.user_answer(@user.id).answer %>-->
+        <span> × </span>
+      <% end %>
+  <%= link_to "回答詳細", "/answers/#{question.user_answer(@user.id).id}", method: :get , class: "delete_submit"%>
+  <%= form_tag(edit_answer_path(question.user_answer(@user.id)), :method=>"get", class:"top_tag") do %>
+          <%= hidden_field_tag(:question_id, question.id) %>
+          <%= submit_tag("解き直す", :class => "question_submit") %><br>
+  <% end %>
+</div>

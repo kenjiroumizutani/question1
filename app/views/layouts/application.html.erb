@@ -10,6 +10,29 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="header__bar row">
+        <div class="title"><a href="/">Rails <span>Que</span>stions</a></div>
+        <% if user_signed_in? %>
+         <div class="nav">
+          <div class="user_navgrid-6">
+            <%= link_to "問題作成", new_question_path, class: "kadomaru" %>
+            <!--<a class="post" href="/tweets/new">投稿する</a>-->
+            <!--テキストでは上記の書き方をしていたがlink_toを使わない理由はあるのかな？なんでpostなんだ？newはgetだよね？-->
+            <%= link_to "マイページ", user_path(current_user), class: "kadomaru" %>
+            <%= link_to "プロフィール編集", edit_user_path(current_user), class: "kadomaru" %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete , class: "kadomaru"%>
+          </div>
+        <% else %>
+          <div class="grid-6">
+            <%= link_to "新規登録", new_user_registration_path, class: "kadomaru" %>
+            <%= link_to "ログイン", new_user_session_path, class: "kadomaru" %>
+          </div>
+         </div>
+        <% end %>
+      </div>
+    </header>
+    
     <%= yield %>
   </body>
 </html>

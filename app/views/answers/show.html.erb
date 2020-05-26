@@ -1,0 +1,19 @@
+ <div class="bg-mask">
+  <div class="qsupdate">
+    <h5><%= @question.questions %></h5>
+    <h2>正解は <span><%= @question.correct %> </span></h2>
+    
+    <h2>あなたの回答は
+      <% if @question.correct == @answer.answer %>
+        <%= @answer.answer %><span> ○ </span>
+      <% else %>
+        <%= @answer.answer %><span> × </span>
+      <% end %>
+    </h2>
+    <h5>学習メモ</h5>
+    <%= @answer.comment %>
+   
+   
+    <p><%= link_to '一覧へ戻る', "/", method: :get %></p>
+</div>
+</div>

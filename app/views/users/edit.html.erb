@@ -1,0 +1,7 @@
+ <%= form_for current_user do |f| %>
+      <%= label_tag :名前の変更 %><br>
+      <%= f.text_field :username , autofocus:"true"%><br>
+      <%= f.submit "変更する", class: "button_1" %>
+  <% end %>
+  
+  <%= link_to "ホームに戻る", "/", method: :get , class: "button_1"%>

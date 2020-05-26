@@ -3,12 +3,48 @@
 }
 
 
+header {
+  margin-bottom: 80px;
+}
+
+.nav {
+  position: relative; 
+  overflow: hidden;
+}
+
+.user_navgrid-6 {
+  position: relative;
+  left: 50%; /* リスト全体である要素を右に50%移動。つまり先頭を中央に持ってくる感じです。 */
+  float: left;
+}
+
+.grid-6 {
+  position: relative;
+  left: 50%; /* リスト全体である要素を右に50%移動。つまり先頭を中央に持ってくる感じです。 */
+  float: left;
+}
+
+.kadomaru {
+  width:120px;
+  font-size:12px;
+  color:#FFFFFF;
+  text-align:center;
+  display:block;
+  padding:10px 10px 10px;
+  background:#6BCBF6;
+  border-radius: 20px;
+  position: relative;
+  float:left;
+  left: -50%; /* 各リスト項目になる要素を左に50%移動。 */
+}
+
+
 body {
     height: 100%;
     color: #000;
     text-align: center;
     font-size: 0.8rem;
-    background: radial-gradient(#F2B9A1, #FFFFFF);
+    background: radial-gradient(#CCCCCC, #FFFFFF);
     background-size: cover;
     
 }
@@ -19,7 +55,17 @@ body {
    /*background: rgba(255,255,255,0.3);*/
 }
 
-.bg-mask span{
+.title {
+  color: rgb(100,100,200);
+  font-size: 5.0rem;
+  margin: 50px 0px 20px 0px;
+}
+
+.title a {
+    text-decoration: none;
+}
+
+.title span{
   color:#FF0000;
 }
 
@@ -46,19 +92,13 @@ body {
   font-size: 1.5rem;
 }
 
-.title {
-  color: rgb(100,100,200);
-  font-size: 5.0rem;
-  margin: 50px 0px 20px 0px;
-}
-
 .qsmenu {
   font-size: 1.8rem;
 }
 
 input[type="text"] {
-  width: 400px;
-  height: 45px;
+  width: 100px;
+  height: 30px;
 }
 
 .qsedit {
@@ -75,6 +115,58 @@ input[type="text"] {
 }
 
 .qs_select {
-  /*margin: 5% 20%;*/
-  /*text-align: left;*/
+  margin: 0 32%;
+  text-align: left;
+  font-size: 1.8rem;
+  border-bottom:solid 1px #000000;
+}
+
+.qs_title {
+  float: left;
+  width: 350px;
+}
+
+.top_tag {
+    display: inline;
+}
+
+.question_submit {
+  border-radius : 12%;          /* 角丸       */
+  font-size     : 14pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 8px 3px;   /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+}
+
+.delete_submit {
+  border-radius : 12%;          /* 角丸       */
+  font-size     : 14pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 4px 3px;     /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+}
+
+.mypege_select {
+  margin: 0 28%;
+  text-align: left;
+  font-size: 1.8rem;
+  border-bottom:solid 1px #000000;
+}
+
+.user_name {
+   font-size: 3.0rem;
+}
+
+.user_qs span {
+  display: inline-block;
+  width: 40px;
+  text-align    : center; 
 }

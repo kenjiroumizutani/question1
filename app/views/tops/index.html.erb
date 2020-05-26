@@ -3,41 +3,16 @@
  
  <body>
   <div class="bg-mask">
-   <div class="title">Rails <span>Que</span>stions</div>
    
-   <div class="top_info">
-   <%=link_to "採用担当者様へ", "/questions", method: :get  %>
-   </div>
-   
-   <h1>問題作成</h1>
-   ＊入力エリアの右下をドラックすると任意の大きさに変化できます。
-   <div class="qsmenu">
-    <%= form_for(@question) do |f| %>
-      <div class="qs_make">クイズタイトル<br>
-      <!--text_areaは改行挟む長い文に適している-->
-      <%= f.text_area :title,:size=>"60x1", placeholder: "例：railsコマンド" %><br>
-      <!--textarea の場合は指定する cols と rows のサイズを "colsxrows" として :size にセットする-->
-     問題<br>
-      <%= f.text_area :questions,:size=>"60x5", placeholder: "例：サーバーを立ち上げるコマンドは？" %><br>
-     選択肢A<br>
-      <%= f.text_area :choice1,:size=>"60x1", placeholder: "例：rails routes" %><br>
-     選択肢B<br>
-      <%= f.text_area :choice2,:size=>"60x1", placeholder: "例：rails g" %><br>
-     選択肢C<br>
-      <%= f.text_area :choice3,:size=>"60x1", placeholder: "例：rails s" %><br>
-     正解><br>
-      <%= f.text_area :correct,:size=>"60x1", placeholder: "例：rails s" %><br>
-      <%= f.submit "問題を作る" %></qs_make><br><br>
-    <% end %>
-    
-    
-    <h1>問題一覧</h1>
-    <div class="qs_select">
-      <%= render partial: "tops/question", collection: @questions %>
+    <div class="top_info">
+        <%= link_to "採用担当者様へ", "/questions", method: :get  %>
     </div>
-    <br>
-      試作品ですので問題数は少な目です<br>
-   </div>
+   
+    <h1>問題一覧</h1>
+      <%= render partial: "tops/question", collection: @questions %>
+      <br>
+      試作品ですので問題数は少ないです<br>
+    </div>
   </div>
  </body>
  

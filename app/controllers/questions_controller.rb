@@ -41,6 +41,6 @@ class QuestionsController < ApplicationController
   end
   
   def create_params
-    params.require(:question).permit(:questions,:title,:choice1,:choice2,:choice3,:correct)
+    params.require(:question).permit(:questions,:title,:choice1,:choice2,:choice3,:correct).merge(user_id: current_user.id)
   end
 end
